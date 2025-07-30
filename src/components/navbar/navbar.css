@@ -39,6 +39,11 @@ html,body{
     width: 100px;
 }
 
+.istelogo_mob{
+    width: 90px;
+    margin-left:60px;
+}
+
 .nav ul {
     display: flex;
     gap: 25px;
@@ -54,10 +59,7 @@ html,body{
     font-size: 20px;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+
 
 .bar {
     display: block;
@@ -81,7 +83,7 @@ html,body{
 
 @media screen and (max-width: 992px) {
     .navcontent {
-        width: 98%;
+        width: 100%;
     }
     .nav ul li {
         font-size: 15px;
@@ -97,20 +99,24 @@ html,body{
 
     .nav {
         position: fixed;
-        left: -150%;
+        left: 0;
         top: 0;
-        gap: 0;
         flex-direction: column;
         background-color: rgba(25, 25, 25, 0.95);
-        width: 100%;
+        width: 200px;
         height: 100vh;
         text-align: center;
-        transition: 0.3s;
+        transition: transform 0.3s ease;
+        transform: translateX(-200%);
         justify-content: center;
+     padding-top: 50px;
+    backdrop-filter: blur(5px);
+
     }
 
+
     .nav.active {
-        left: 0;
+       transform: translateX(-20%);
     }
 
     .nav ul {

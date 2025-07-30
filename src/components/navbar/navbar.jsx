@@ -47,7 +47,7 @@ const Navbar = () => {
         <motion.div className={`nav ${menuOpen ? "active" : ""}`}>
            {/* Logo for mobile view */}
            <div className="mobile-logo">
-              <img src={logo} className='istelogo' alt="logo" />
+              <img src={logo} className='istelogo_mob' alt="logo" />
             </div>
           <motion.ul variants={ulvariants} initial="initial" animate="animate">
             <motion.li variants={livariants}><a href="#hero">HOME</a></motion.li>
@@ -61,11 +61,13 @@ const Navbar = () => {
         </motion.div>
 
         {/* Hamburger Menu Icon */}
-        <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+   
+   <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
+
       </div>
     </div>
   );
